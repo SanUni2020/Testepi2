@@ -1,0 +1,166 @@
+    {% extends 'base.html' %}
+
+    {% block conteudo%}
+
+   <title>RJM Contábil</title>
+
+<body>
+<header id="inicio">
+    <img id="logo" src="../static/imagens/logo.jpg" alt="Logo">
+    <h1>15 anos de experiência</h1>
+</header>
+
+<nav>
+    <a href="#empresa">Sobre</a>
+    <a href="#serviços">Serviços</a>
+    <a href="#contatos">Contatos</a>
+</nav>
+
+<main>
+
+    <section class="container">
+        <h2 id="serviços">Serviços</h2>
+
+        <div>
+            <p>Atuamos no mercado dando suporte aos nossos clientes quanto a constituição, administração e consultorias da área</p>
+            <p>Serviços de rotina contábil conforme as normas contábeis e legislação em vigor</p>
+            <p>Rotina fiscal completa</p>
+            <p>Abertura e fechamento de empresas</p>
+            <p>Atendimento a microempreendedor individual - MEI</p>
+            <p>Execução da rotina do departamento de pessoal desde o registro de funcionário à folha de pagamentos incluindo guia de impostos</p>
+            <p>Escrituração contábil</p>
+            <p>Declaração de imposto de renda</p>
+            <p>Suporte técnico aos departamentos da empresa com visitas sob demanda, com elabroração de relátórios para a comunicação de sugestões ou divergências</p>
+            <br>
+        </div>
+    </section>
+
+    <section class="container">
+        <h2>Links Úteis</h2>
+
+        <div class="alinha">
+            <div>
+                <button><a href="https://www.gov.br/receitafederal/pt-br" target="_blank"><img src="../static/imagens/ReceitaFederal_150.png"></a></button>
+                <button><a href="https://servicos.receita.fazenda.gov.br/Servicos/certidaointernet/PJ/Emitir" target="_blank"><img src="../static/imagens/Cnegativa.png"></a></button>
+                <button><a href="https://www.saogoncalo.rj.gov.br/" target="_blank"><img src="../static/imagens/Prefeitura_150.png"></a></button>
+                <button><a href="https://www4.fazenda.rj.gov.br/certidao-fiscal-web/emitirCertidao.jsf" target="_blank"><img src="../static/imagens/RecEstadSefaz_150.png"></a></button>
+                <button><a href="https://servicos.receita.fazenda.gov.br/servicos/cnpjreva/cnpjreva_solicitacao.asp" target="_blank"><img src="../static/imagens/CNPJ.png"></a></button>
+                <button><a href="https://servicos.receita.fazenda.gov.br/servicos/cpf/consultasituacao/consultapublica.asp" target="_blank"><img src="../static/imagens/CPF.png"></a></button>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="container">
+        <h2 id="empresa">Empresa</h2>
+
+        <section class="galeria">
+            <img src="../static/imagens/001.jpg" alt="" onclick="mostrarImagem(this)">
+            <img src="../static/imagens/002.jpg" alt="" onclick="mostrarImagem(this)">
+            <img src="../static/imagens/003.jpg" alt="" onclick="mostrarImagem(this)">
+            <img src="../static/imagens/004.jpg" alt="" onclick="mostrarImagem(this)">
+            <img src="../static/imagens/005.jpg" alt="" onclick="mostrarImagem(this)">
+            <img src="../static/imagens/006.jpg" alt="" onclick="mostrarImagem(this)">
+            <img src="../static/imagens/007.jpg" alt="" onclick="mostrarImagem(this)">
+            <img src="../static/imagens/008.jpg" alt="" onclick="mostrarImagem(this)">
+            <img src="../static/imagens/009.jpg" alt="" onclick="mostrarImagem(this)">
+            <img src="../static/imagens/010.jpg" alt="" onclick="mostrarImagem(this)">
+        </section>
+
+        <section class="conteiner">
+            <span onclick="this.parentElement.style.display='none'" class="btnFechar">&times;</span>
+            <img src="" id="imagemGrande">
+        </section>
+
+    </section>
+
+    <section class="container">
+        <h2>Sobre</h2>
+
+        <div>
+            <h3>Nossa Missão</h3>
+            <p>Fornecer serviços de qualidade em tempo curto para que o empressário tenha confiança ao tomar decisões.</p>
+            <h3>Visão Empresarial</h3>
+            <p>Sermos reconhecidos pela apresentação de soluções contábeis e pela agilidade nas respostas as demandas de nossos clientes.</p>
+            <h3>Valores</h3>
+            <p>Ética profissional, busca contínua pela qualidade, trabalho em equipe, transparência, dinamismo e parceria com nossos clientes e a comunidade.</p>
+            <br>
+        </div>
+    </section>
+
+    <section class="container">
+        <h2 id="contatos">Contatos</h2>
+
+        <section class="contato">
+
+            <div class="contato-card">
+                <h3>Entre em Contato!</h3><!-- TUDO QUE COLOCAR AQUI DENTRO VAI FICAR CENTRALIZADO -->
+                <button class="botao"><a href="https://www.facebook.com/RJMContabilidadee" target="_blank"><img src="../static/imagens/Facebook_178.png"></a></button>
+                <button class="botao"><a href="https://www.instagram.com/rjmcontabil/" target="_blank"><img src="../static/imagens/Instagram_178.png"></a></button>
+                <button class="botao"><a href="{{ url_for('mensagem')}}" target="_blank"><img src="../static/imagens/Mensagem_178.png"></a></button>
+                <button class="botao"><img src="../static/imagens/Email_178.png" onmouseover="this.src='../static/imagens/NomEmail_178.png'" onmouseout="this.src='../static/imagens/Email_178.png'"></button>
+                <button class="botao"><img src="../static/imagens/Logo_178.png" onmouseover="this.src='../static/imagens/Logo_178.png'" onmouseout="this.src='../static/imagens/Logo_178.png'"></button>
+                <button class="botao"><img src="../static/imagens/Telefone_178.png" onmouseover="this.src='../static/imagens/NumTel_178.png'" onmouseout="this.src='../static/imagens/Telefone_178.png'"></button>
+            </div>
+
+            <h3>Localização</h3>
+
+            <div id="map"></div>
+        </section>
+        
+        <script src="https://maps.googleapis.com/maps/api/js?callback=initMap&libraries=&v=weekly" async></script>
+     
+    </section>
+
+    <section class="container">
+        <h2>Comentários</h2>
+        <h5><a href="/novo">Adicionar Comentário</a></h5>
+
+        <section id="comentei">
+            <table>
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Nome</th>
+                    <th>Comentário</th>
+                    <th>Ações</th>
+               </tr>
+               </thead>
+
+                <tbody>
+                {% for m in comentarios %}
+                <tr>
+                    <td>{{m.id}}</td>
+                    <td>{{m.nome}}</td>
+                    <td>{{m.comentario}}</td>
+                    <td>
+                        <a href="/edita/{{m.id}}">Editar</a>
+                        <a href="/{{m.id}}">Apagar</a>
+                    </td>
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </section>
+
+        {% if comenta != undefined %}
+        <section class="modal">
+
+            <div id="card">
+                <h2>Apagar o comentário escrito por:</h2>
+                <hr>
+                <p>" {{comenta.nome}} " </p>
+
+                <div id="btns">
+                    <a class="btn-cancelar" href="/#comentei">Cancelar</a>
+                    <a class="btn-apagar" href="/delete/{{comenta.id}}">Apagar</a>
+                </div>
+            </div>
+
+        </section>
+        {% endif %}
+    </section>
+
+</main>
+</body>
+{% endblock %}
